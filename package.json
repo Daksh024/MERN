@@ -1,0 +1,14 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "FullStack Programming.",
+  "main": "..",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "MERN"
+  ],
+  "author": "Suraj Kamble",
+  "license": "ISC"
+}
