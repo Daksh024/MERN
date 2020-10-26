@@ -1,6 +1,6 @@
-# MERN (mongodb expressjs reactjs nodejs)
+# MERN (mongodb expressjs reactjs nodejs) 💻
 
-## Full Stack propgramming for a website.
+## Full Stack propgramming for a website. 🤺
 
     For FrontEnd, Im going to use ReactJS and ExpressJS to view.
 
