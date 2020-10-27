@@ -50,6 +50,14 @@ class Sidebar extends Component {
     }
 
     render(){
+        window.onmouseup = (event) => {
+            if(this.state.sidebar === 'close'){
+                this.setState({
+                    style:"menu",
+                    sidebar:"open"
+                });
+            }
+        }
         return(
             <div className="Sidebar">
                 <button onClick={this.handleClick}>|||</button>
