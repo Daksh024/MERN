@@ -1,14 +1,9 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: #ecf0f1;
-}
 
-button {
+.sidebarbutton {
   transform: rotate(90deg);
+  left: 30px;
   width: 40px;
-  height: 40px;
+  height: 70px;
   background-color: #f9cb11;
   border: none;
   border-radius:6px;
@@ -19,7 +14,7 @@ button {
   transition: all 0.25s ease;
 }
 
-button:hover {
+.sidebarbutton:hover {
   opacity: 0.8;
   transition: all 0.25s ease;    
 }

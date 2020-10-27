@@ -4,7 +4,7 @@ import './Sidebar.css'
 
 const navlnk = [
     {
-        url:'.',
+        url:'/#',
         name:'Name'
     },
     {
@@ -60,7 +60,7 @@ class Sidebar extends Component {
         }
         return(
             <div className="Sidebar">
-                <button onClick={this.handleClick}>|||</button>
+                <button className="sidebarbutton" onClick={this.handleClick}>|||</button>
                 <div className={this.state.style}>
                     <ul>
                         {navlnk.map(({url,name}) =>(

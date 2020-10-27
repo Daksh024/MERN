@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import './header.css'
+import Searchbar from "../Searchbar/searchbar";
 import Sidebar from "../Sidebar/Sidebar";
-import "./Header.css"
 
 class header extends Component {
     render() {
         return (
-            <div className="Navgation">
-                <div className="header">
-                    <a href="." className="logo">CompanyLogo</a>
+            <div className="header">
+                <div className="NavBar">
+                    <Sidebar />
+                    <Searchbar />
                 </div>
-                <Sidebar />
             </div>
         );
     }
