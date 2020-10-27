@@ -1,47 +1,69 @@
+/* eslint-disable default-case */
 import React, { Component } from 'react';
 import './Sidebar.css'
-// import "./control"
+
+const navlnk = [
+    {
+        url:'.',
+        name:'Name'
+    },
+    {
+        url:'/product',
+        name:'Product'
+    },
+    {
+        url:'/about',
+        name:'About Us'
+    },
+]
 
 class Sidebar extends Component {
 
     constructor(props){
-        super(props)
+        super(props);
 
-        this.toggle = this.toggle.bind(this);
+        this.state = {
+            style:"menu",
+            sidebar:"open"
+        };
+
+        this.handleClick = this.handleClick.bind(this)
     }
 
-    toggle(){
+    handleClick(){
+        switch(this.state.sidebar){
+            case 'open':{
+                this.setState({
+                    style:"menu active",
+                    sidebar:"close"
+                });
+                break;
+            }
+            case 'close':{
+                this.setState({
+                    style:"menu",
+                    sidebar:"open"
+                });
+                break;
+            }
+        }
     }
 
-    render() {
-        window.onload = () =>{
-            document.getElementsByClassName('toggle').onclick = () => {
-                document.getElementsByClassName('aside').toggleClass('close');
-            }
-        }
-
-        window.onmouseup = (e) =>{
-            var container = document.getElementsByClassName('aside');
-            if(!container.is(e.target) && container.has(e.target).length === 0)
-            {
-                document.getElementsByClassName('aside').removeClass("close")
-            }
-        }
-        return (
-            <div className="container">
-                <div className="aside">
-                  <button className="toggle">|||</button>
-                  <h1>Menu</h1>
-                  <div className="nav">
-                    <a href=".">Home</a>
-                    <a href="localhost:3000/#">About Us</a>
-                    <a href=".">Services</a>
-                    <a href=".">Portfolio</a>
-                    <a href=".">Contact Us</a>
-                  </div>
+    render(){
+        return(
+            <div className="Sidebar">
+                <button onClick={this.handleClick}>|||</button>
+                <div className={this.state.style}>
+                    <ul>
+                        {navlnk.map(({url,name}) =>(
+                            <li>
+                                <a href={url}>{name}</a>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
             </div>
-        );
+        )
     }
 }
 
